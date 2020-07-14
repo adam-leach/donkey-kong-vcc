@@ -1,7 +1,8 @@
 {
     "name": "Donkey Kong VCC",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "animation": "*"
     },
     "description": "",
     "files": [
