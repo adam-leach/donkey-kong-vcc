@@ -124,9 +124,6 @@ f f f f f f f f f f f f f f f f
 }
 scene.onOverlapTile(SpriteKind.Projectile, myTiles.tile5, function (sprite, location) {
     if (barrel_detection_thing == 2) {
-        projectile4.ay = 350
-        pause(500)
-        projectile4.ay = 0
         if (projectile4.vx == 150) {
             projectile4.vx = -150
         } else {
@@ -137,7 +134,6 @@ scene.onOverlapTile(SpriteKind.Projectile, myTiles.tile5, function (sprite, loca
 info.onCountdownEnd(function () {
     barrel_detection_thing = Math.randomRange(1, 2)
     if (barrel_detection_thing == 1) {
-        scene.cameraFollowSprite(projectile4)
         projectile4 = sprites.createProjectileFromSide(img`
 . . e f e e e e e e e e f e . . 
 . e e f e e e e e e e e f e e . 
@@ -158,7 +154,7 @@ e e e f e e e e e e e e f e e e
 `, 0, 150)
         tiles.placeOnTile(projectile4, tiles.getTileLocation(Math.randomRange(0, 29), 4))
     } else {
-        scene.cameraFollowSprite(projectile4)
+        tiles.placeOnTile(projectile4, tiles.getTileLocation(11, 4))
         projectile4 = sprites.createProjectileFromSide(img`
 . . e f e e e e e e e e f e . . 
 . e e f e e e e e e e e f e e . 
@@ -177,6 +173,7 @@ e e e f e e e e e e e e f e e e
 . e e f e e e e e e e e f e e . 
 . . e f e e e e e e e e f e . . 
 `, 150, 0)
+        projectile4.ay = 350
         animation.attachAnimation(projectile4, animation2)
     }
 })
