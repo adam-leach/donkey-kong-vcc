@@ -121,6 +121,25 @@ f f f f f f f f f f f f f f f f
 9 9 . . . . . . . . . . . . 9 9 
 9 9 . . . . . . . . . . . . 9 9 
 `
+    //% blockIdentity=images._tile
+    export const tile6 = img`
+. . . . . . . . . . . . . . . . 
+. . . . 2 2 . . . . 2 2 . . . . 
+. . . 2 . . . . . . . . 2 . . . 
+. . . . . . . . . . . . . . . . 
+. . . 4 4 4 . . . . 4 4 4 . . . 
+. . . 4 4 4 . . . . 4 4 4 . . . 
+. . . 4 4 4 4 . . 4 4 4 4 . . . 
+. . . . . . . 2 2 . . . . . . . 
+. . . . . . 2 2 2 2 . . . . . . 
+. . . . . 2 2 2 2 . . . . 2 . . 
+. . 2 . . . 2 2 2 . . . . 2 . . 
+. . 2 . . 2 2 2 . . . . 2 2 . . 
+. . . 2 2 . . . 2 2 2 2 . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`
 }
 scene.onOverlapTile(SpriteKind.Projectile, myTiles.tile5, function (sprite, location) {
     if (barrel_detection_thing == 2) {
@@ -220,7 +239,7 @@ tiles.setTilemap(tiles.createTilemap(
 . . . . . . . . . . . 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 . . . . . . . . . . . . . . . . . . . 
 `,
-            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5],
+            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6],
             TileScale.Sixteen
         ))
 let level = 1
